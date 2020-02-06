@@ -1,0 +1,28 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "title": "Marinated raw prawns with Thai sauce",
+            "description": null,
+            "price": 16.50
+        },
+        {
+            "id": 2,
+            "title": "Wor Tip",
+            "description": "Fried dumplings with pork",
+            "price": 6.20
+        },
+        {
+            "id": 3,
+            "title": "Custom Super Bowl Regular",
+            "description": "Choose from our amazing ingridients to create your own individual bowl ",
+            "price": 16.00
+        },
+        {
+            "id": 4,
+            "title": "Menu Salad",
+            "description": "Lettuce, house dressing, corn",
+            "price": 9.00
+        }
+    ]
+}
