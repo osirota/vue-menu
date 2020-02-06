@@ -121,6 +121,7 @@
         position: fixed;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         background: #fff;
 
         @media (min-width: 320px) {
@@ -155,7 +156,6 @@
             }
             img {
                 width: 100%;
-                height: 180px;
             }
         }
         &-content {
