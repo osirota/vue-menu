@@ -1,4 +1,4 @@
-# ciklum
+# vue-menu
 
 ## Project setup
 ```
