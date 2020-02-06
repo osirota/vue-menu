@@ -29,7 +29,7 @@ import { mapGetters, mapActions } from 'vuex'
 import Card from '@/components/Card.vue';
 import CardPopUp from '@/components/CardPopUp.vue';
 export default {
-  name: 'menu',
+  name: 'Menu',
   components: {
     Card,
     CardPopUp,

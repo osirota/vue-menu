@@ -8,8 +8,11 @@ const getters = {
     isOpenCardPopUp: state => state.isOpen,
     productChoose: state => state.productChoose,
     isProductChoose: (state) => (id) => state.cart.filter(product => product.id === id).length > 0,
-    getCountProductInCart: (state) => (id) => state.cart.filter(product => product.id === id)[0].countProduct,
-    cartLenght: (state) => state.cart.length
+    getCountProductInCart: (state) => (id) => {
+       const [foundProduct] =  state.cart.filter(product => product.id === id);
+       return foundProduct && foundProduct.countProduct
+    },
+    cartLength: (state) => state.cart.length
 };
 
 

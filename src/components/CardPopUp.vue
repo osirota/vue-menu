@@ -55,7 +55,7 @@
                 'productChoose',
                 'isProductChoose',
                 'getCountProductInCart',
-                'cartLenght'
+                'cartLength'
             ]),
             imageSrc: function() {
                 return require(`@/assets/som-tam${this.productChoose.key}.png`)
@@ -90,7 +90,7 @@
         },
         watch: {
             isOpenCardPopUp: function(val) {
-                if(val && this.cartLenght) {
+                if(val && this.cartLength) {
                     const getCount = this.getCountProductInCart(this.productChoose.id);
                     this.countProduct = getCount > 0 ? getCount : 0;
                 }
@@ -112,7 +112,8 @@
     .slide-fade-leave-active {
         transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
     }
-    .slide-fade-enter, .slide-fade-leave-to {
+    .slide-fade-enter,
+    .slide-fade-leave-to {
         transform: translateY(30px);
         opacity: 0;
     }
