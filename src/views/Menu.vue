@@ -6,27 +6,39 @@
         <p class="menu-text">Our classic Thai dishes that inspire again and again!</p>
       </div>
       <div class="menu-list">
-        <div class="menu-row" v-for="(product, key) in getProducts.products" :key="product+key">
-          <Card :product='product' />
+        <div class="menu-row" v-for="(product, key) in getProducts.popular" :key="product+key">
+          <Card :product='{ ...product, key } ' />
+        </div>
+      </div>
+      <div class="menu-row">
+        <h3 class="menu-title">Appetizers</h3>
+        <p class="menu-text">Enjoy our delicious appetizers made with fresh asian ingriedents.</p>
+      </div>
+      <div class="menu-list">
+        <div class="menu-row" v-for="(product, key) in getProducts.appetizers" :key="product+key">
+          <Card :product='{ ...product, key } ' />
         </div>
       </div>
     </div>
+    <CardPopUp />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Card from '@/components/Card.vue';
+import CardPopUp from '@/components/CardPopUp.vue';
 export default {
   name: 'menu',
   components: {
     Card,
+    CardPopUp,
   },
   computed: {
-    ...mapGetters('products', ['getProducts'])
+    ...mapGetters(['getProducts'])
   },
   methods: {
-    ...mapActions('products', ['fetchProducts'])
+    ...mapActions(['fetchProducts'])
   },
   created() {
     this.fetchProducts();
@@ -53,7 +65,7 @@ export default {
       }
       &-row {
         margin: 24px 8px 0;
-        padding: 0 0 24px;
+        padding: 0 10px 24px;
         border-bottom: 1px solid #eaeaea;
       }
     }
